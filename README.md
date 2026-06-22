@@ -41,7 +41,7 @@ In your `app/build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.<YourUsername>:network-monitor:<release_tag>")
+    implementation("com.github.Coderkube-App:android-network-monitor:1.0.1")
 }
 ```
 
