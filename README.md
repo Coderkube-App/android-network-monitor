@@ -1,5 +1,7 @@
 # Network Monitor
 
+[![](https://jitpack.io/v/Coderkube-App/android-network-monitor.svg)](https://jitpack.io/#Coderkube-App/android-network-monitor)
+
 A production-ready Android library module for real-time internet connectivity monitoring,
 exposing network state to Jetpack Compose and ViewModel layers via Kotlin Coroutines `StateFlow`.
 
@@ -41,7 +43,7 @@ In your `app/build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Coderkube-App:android-network-monitor:1.0.1")
+    implementation("com.github.Coderkube-App:android-network-monitor:1.0.2")
 }
 ```
 
