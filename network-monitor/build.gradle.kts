@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    id("maven-publish")
 }
 
 android {
@@ -32,6 +33,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+    publishing {
+        singleVariant("release")
+    }
 }
 
 dependencies {
@@ -55,4 +60,18 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.github.Coderkube-App"
+                artifactId = "network-monitor"
+                version = "1.0.2"
+            }
+        }
+    }
 }
